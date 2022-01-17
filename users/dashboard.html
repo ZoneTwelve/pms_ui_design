@@ -4,11 +4,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" content="width=device-width, user-scalable=no" />
-  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <title>檢查 | PMS</title>
+  <link href="/common/css/bootstrap.min.css" rel="stylesheet">
+  <script src="/common/js/vue.js"></script>
+  <script src="/src/js/users/dashboard.js"></script>
+  <title>日誌紀錄 | PMS</title>
+  <style>
+    body{
+      margin:0 auto;
+    }
+    .col-auto{
+      /* border: 3px solid black; */
+      min-height:700px;
+    }
+  </style>
 </head>
 <body>
-  
+  <nav class="border-0 navbar border border-bottom" style="background: #2a4c65; color:white;" >
+    <div class="container-fluid">
+      <a style="width:50px" class="navbar-brand m-0 p-0">
+        <img height="64px" class="rounded-3 p-1 d-inline-block align-text-top" src="/src/images/logo.png" alt="">
+        <!-- <span class="lead text-white">System dashboard</span> -->
+      </a>
+      <form class="d-flex">
+        <input type="hidden" name="method" value="DELETE">
+        <button class="border-0 text-white shadow-sm btn btn-outline-danger" type="submit">
+          <img width="30" src="/src/images/logout-icon.png" alt="">
+          登出
+        </button>
+        <img width="36" height="36" class="shadow-sm border rounded-circle m-3 mt-auto mb-auto d-inline-block align-text-top" src="/src/images/default-user-icon.png" alt="User avatar">
+      </form>
+    </div>
+  </nav>
+  <div class="pt-4"></div>
+  <div class="container-fluid row">
+    <div class="p-4 m-3 shadow border rounded-3 col-lg-3 col-md-12 order-1 order-lg-1 container">
+      <h2>重要公告</h2>
+    </div>
+    <div class="p-4 m-3 shadow border rounded-3 col-lg-5 col-md-12 order-2 order-lg-2 container">
+      <h2>宿舍巡察日誌</h2>
+
+    </div>
+    <div class="p-4 m-3 shadow border rounded-3 col-lg-3 col-md-12 order-2 order-lg-3 container">
+      <h2>重要交接事項</h2>
+    </div>
+  </div>
 </body>
 </html>
