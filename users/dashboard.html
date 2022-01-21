@@ -16,6 +16,39 @@
       /* border: 3px solid black; */
       min-height:700px;
     }
+
+    .color-dark-red{
+      color: white;
+      background: #965456;
+    }
+    .color-dark-gray{
+      color: white;
+      background: #a29988;
+    }
+    .btn-24-font{
+      font-size: 24px;
+    }
+
+    .exclamation-mark{}
+    .exclamation-mark::after{
+      margin-top: -16px;
+      padding-left: 1px;
+      position: absolute;
+      content:"!";
+      font-size: 16px;
+      width: 24px;
+      height:24px;
+      background: red;
+      border-radius: 50px;
+      border: 1px solid red;
+      box-shadow: 1px 1px 1px balck;
+      transition-duration: .25s;
+    }
+    .exclamation-mark:hover::after{
+      color:white;
+      box-shadow:1px 1px 0.5px black;
+    }
+
   </style>
 </head>
 <body>
@@ -39,10 +72,20 @@
   <div class="container-fluid row">
     <div class="p-4 m-3 shadow border rounded-3 col-lg-3 col-md-12 order-3 order-lg-1 container">
       <h2>行事曆</h2>
+      <p>住宿服務組 {{ 管理員行事曆 }}</p>
     </div>
     <div class="p-4 m-3 shadow border rounded-3 col-lg-5 col-md-12 order-1 order-lg-2 container">
-      <h2>宿舍巡察日誌</h2>
-
+      <!-- <h2>宿舍巡察日誌</h2> -->
+      <div>
+        <h2>巡察日誌</h2>
+        <div class="container my-2 mx-0 py-4 px-1 rounded-3">
+          <button class="btn btn-24-font rounded-3 color-dark-red exclamation-mark">檢查 東區</button>
+          <button class="btn btn-24-font rounded-3 color-dark-gray">檢查 西區</button>
+        </div>
+        <h2>宿舍巡查紀錄</h2>
+        <div class="container">
+        </div>
+      </div>
     </div>
     <div class="p-4 m-3 shadow border rounded-3 col-lg-3 col-md-12 order-2 order-lg-3 container">
       <h2>重要交接事項</h2>
